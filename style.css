@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial";
+  color: #660708;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+#game {
+  margin-top: 1vw;
+  display: grid;
+  height: 90%;
+  width: 50%;
+  background: linear-gradient(to bottom right, #f0f0f0, #c0c0c0);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+#score {
+  position: absolute;
+  height: 3vw;
+  width: 6vw;
+  border-radius: 10px;
+  right: 16%;
+  top: 4vw;
+  background-color: #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#score::before {
+  content: "Score";
+  position: absolute;
+  top: -100%;
+}
+
+#snakeHead {
+  background-color: #a4161a;
+  border-radius: 10%;
+  position: relative;
+}
+
+#snakeHead::before,
+#snakeHead::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#snakeHead::before {
+  top: 25%;
+  left: 20%;
+}
+
+#snakeHead::after {
+  top: 25%;
+  right: 20%;
+}
+
+#snakeBody {
+  border-radius: 30%;
+  background-color: #e5383b;
+}
+#food {
+  border-radius: 10%;
+  background-color: #0b090a;
+}
+.gameOver {
+  position: absolute;
+  z-index: 10;
+  transform: translate(50, -50);
+  font-size: 4rem;
+}
