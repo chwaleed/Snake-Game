@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="main">
-      <h1>Snake Game</h1>
-      <div id="score"></div>
-      <div id="game"></div>
+      <header class="hud">
+        <h1>3D Snake</h1>
+        <div id="score" aria-live="polite">0</div>
+      </header>
+      <div id="gameWrap">
+        <div id="game"></div>
+      </div>
+      <p class="help">Use arrow keys to move</p>
     </div>
     <script src="script.js"></script>
   </body>
